@@ -1,0 +1,9 @@
+gnore everything
+*
+
+# Allow specific files
+!main.cpp
+!Queue.h
+!Queue_impl.hpp
+!README.md
+!.gitignore
