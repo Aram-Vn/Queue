@@ -41,8 +41,46 @@
 
 ## Usage
 
-To use the `my::Queue` class, copy both Queue_declaration.hpp and Queue_impl.hpp files into your project directory. Include the "Queue_declaration.hpp" header file in your C++ project.
+To use the `my::Queue` class, copy both Queue_declaration.hpp and Queue_impl.hpp files into your project directory. Include the "Queue_declaration.h" header file in your C++ project.
 
 ```cpp
-#include "Queue_declaration.hpp"
+#include "Queue_declaration.h"
+```
 
+## Compiling:
+
+``bash
+g++ -o <your_program_name> main.cpp
+``
+
+Once the queue is integrated into your project, you can use the provided functions to work with the queue.
+
+```cpp
+#include <iostream>
+#include "Queue_declaration.h"
+
+int main() {
+    // Create a queue of integers
+    my::Queue<int> intQueue;
+
+    // Enqueue elements into the queue
+    intQueue.enqueue(42);
+    intQueue.enqueue(17);
+    intQueue.enqueue(8);
+
+    // Display the front and rear elements
+    std::cout << "Front element: " << intQueue.front() << std::endl;
+    std::cout << "Rear element: " << intQueue.rear() << std::endl;
+
+    // Dequeue an element
+    intQueue.dequeue();
+
+    // Display the size of the queue
+    std::cout << "Queue size: " << intQueue.size() << std::endl;
+
+    // Print all elements in the queue
+    intQueue.print();
+
+    return 0;
+}
+```
