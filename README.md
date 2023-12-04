@@ -36,7 +36,7 @@
 
 - The queue dynamically allocates memory for its elements and automatically reallocates when the capacity is reached.
 - Memory reallocation strategy involves doubling the capacity.
-
+- The `dequeue` method efficiently removes and returns the element at the front of the queue. If the front elements consume less than half of the allocated capacity and the capacity is greater than 8, a reallocation is triggered to optimize memory usage. The reallocation involves shifting the elements to a new memory block, reducing the overall memory footprint.
 ---
 
 ## Usage
