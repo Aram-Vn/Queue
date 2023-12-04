@@ -6,8 +6,8 @@ namespace my {
 	class Queue
 	{
 	public:
-		Queue();
-		~Queue();
+		Queue(); // defolt constructor
+		~Queue(); // destructor
 		
 		Queue(const Queue& other); // copy constructor 
 		Queue(Queue&& other) noexcept; //move constructor		
@@ -20,15 +20,15 @@ namespace my {
 		bool isEmpty() const; //This operation indicates whether the queue is empty or not.
 		size_t size() const; //This operation returns the size of the queue i.e. the total number of elements it contains.	
 
-	void print();
+	void print(); // prints elements
 
 	private:
-		void realloc();
+		void realloc(); // reallocates memory by doubling it
 
 	private:
 		size_t m_cap;
-		size_t m_size;
-		size_t m_i;
+		size_t m_end; //m_size
+		size_t m_start; //m_i
 		T* m_ptr;
 	};
 	
