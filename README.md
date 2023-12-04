@@ -53,6 +53,8 @@ To use the `my::Queue` class, copy both Queue_declaration.hpp and Queue_impl.hpp
 g++ -o <your_program_name> main.cpp
 ``
 
+---
+
 ## function usege examples 
 Once the queue is integrated into your project, you can use the provided functions to work with the queue.
 
