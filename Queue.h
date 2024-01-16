@@ -1,6 +1,8 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include <iostream>
+
 namespace my {
     template <class T>
     class Queue
@@ -18,8 +20,7 @@ namespace my {
         T front();            // This operation returns the element at the front end without removing it.
         T rear() const;       // This operation returns the element at the rear end without removing it.
         bool isEmpty() const; // This operation indicates whether the queue is empty or not.
-        size_t size() const;  // This operation returns the size of the queue i.e. the total number of elements it
-                              // contains.
+        size_t size() const;  // This operation returns the size of the queue i.e. the total number of elements it contains.
         void print();         // prints elements
 
     private:
